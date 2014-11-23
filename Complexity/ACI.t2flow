@@ -1,0 +1,319 @@
+<workflow xmlns="http://taverna.sf.net/2008/xml/t2flow" version="1" producedBy="taverna-biodiversity-2.5.0"><dataflow id="8c0600af-da66-4a96-86da-9c419306b488" role="top"><name>ACI_analysis_and_osc</name><inputPorts><port><name>infile</name><depth>0</depth><granularDepth>0</granularDepth><annotations><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.ExampleValue">
+        <text>https://dl.dropboxusercontent.com/u/46267592/chimes.wav</text>
+      </annotationBean>
+      <date>2014-11-19 11:37:09.342 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.FreeTextDescription">
+        <text>Sound file to perform the ACI analysis
+
+The file could be provided by uploading the sound file to analyses or  its url</text>
+      </annotationBean>
+      <date>2014-11-19 11:36:35.340 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain></annotations></port><port><name>sstart</name><depth>0</depth><granularDepth>0</granularDepth><annotations><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.FreeTextDescription">
+        <text>starting second of the sound file from which to perform the analysis</text>
+      </annotationBean>
+      <date>2014-11-19 11:34:47.572 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.ExampleValue">
+        <text>0.2</text>
+      </annotationBean>
+      <date>2014-11-19 11:34:56.619 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain></annotations></port><port><name>sstop</name><depth>0</depth><granularDepth>0</granularDepth><annotations><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.ExampleValue">
+        <text>0.9</text>
+      </annotationBean>
+      <date>2014-11-19 11:35:41.462 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.FreeTextDescription">
+        <text>finishing second of the sound file to perform the analysis</text>
+      </annotationBean>
+      <date>2014-11-19 11:35:39.93 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain></annotations></port></inputPorts><outputPorts><port><name>aci</name><lastPredictedDepth>0</lastPredictedDepth><annotations /></port><port><name>oscilo</name><lastPredictedDepth>0</lastPredictedDepth><annotations /></port></outputPorts><processors><processor><name>ACI_and_Oscilo</name><inputPorts><port><name>infile</name><depth>0</depth></port><port><name>sstart</name><depth>0</depth></port><port><name>sstop</name><depth>0</depth></port></inputPorts><outputPorts><port><name>aci</name><depth>0</depth><granularDepth>0</granularDepth></port><port><name>osciloPlot</name><depth>0</depth><granularDepth>0</granularDepth></port></outputPorts><annotations /><activities><activity><raven><group>net.sf.taverna.t2.activities</group><artifact>rshell-activity</artifact><version>1.5</version></raven><class>net.sf.taverna.t2.activities.rshell.RshellActivity</class><inputMap><map from="infile" to="infile" /><map from="sstart" to="sstart" /><map from="sstop" to="sstop" /></inputMap><outputMap><map from="osciloPlot" to="osciloPlot" /><map from="aci" to="aci" /></outputMap><configBean encoding="xstream"><net.sf.taverna.t2.activities.rshell.RshellActivityConfigurationBean xmlns="">
+  <inputs>
+    <net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityInputPortDefinitionBean>
+      <name>infile</name>
+      <depth>0</depth>
+      <allowsLiteralValues>false</allowsLiteralValues>
+    </net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityInputPortDefinitionBean>
+    <net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityInputPortDefinitionBean>
+      <name>sstart</name>
+      <depth>0</depth>
+      <allowsLiteralValues>false</allowsLiteralValues>
+    </net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityInputPortDefinitionBean>
+    <net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityInputPortDefinitionBean>
+      <name>sstop</name>
+      <depth>0</depth>
+      <allowsLiteralValues>false</allowsLiteralValues>
+    </net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityInputPortDefinitionBean>
+  </inputs>
+  <outputs>
+    <net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityOutputPortDefinitionBean>
+      <name>aci</name>
+      <depth>0</depth>
+      <mimeTypes />
+      <granularDepth>0</granularDepth>
+    </net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityOutputPortDefinitionBean>
+    <net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityOutputPortDefinitionBean>
+      <name>osciloPlot</name>
+      <depth>0</depth>
+      <mimeTypes />
+      <granularDepth>0</granularDepth>
+    </net.sf.taverna.t2.workflowmodel.processor.activity.config.ActivityOutputPortDefinitionBean>
+  </outputs>
+  <rVersion>false</rVersion>
+  <script>library(tuneR);
+library(seewave);
+
+#&lt;&lt;&lt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&gt;&gt;&gt;
+#&lt;&lt;&lt;@@@@@@@@@@@@@@@@@@@@@@@@   Auxiliary functions     @@@@@@@@@@@@@@@@@@@@@@@&gt;&gt;&gt;
+#&lt;&lt;&lt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&gt;&gt;&gt;
+
+trim &lt;- function (x) gsub("^\\s+|\\s+$", "", x)
+
+download &lt;- function(url, ...) {
+  options(timeout=300)
+  url &lt;- trim(url)
+  if (grepl('^https?://', url)) {
+    if (.Platform$OS.type == "windows") {
+      on.exit(suppressWarnings(setInternet2(use=FALSE)))    
+	  if (grepl('^https://', url)) suppressWarnings(setInternet2(use=TRUE))	  
+      download.file(url, ...)      
+    } else {
+      if (nzchar(Sys.which("wget")[1])) {
+        method &lt;- "wget"
+      } else if (nzchar(Sys.which("curl")[1])) {
+        method &lt;- "curl"
+        orig_extra_options &lt;- getOption("download.file.extra")
+        on.exit(options(download.file.extra = orig_extra_options))
+        options(download.file.extra = paste("-L", orig_extra_options))
+      } else if (nzchar(Sys.which("lynx")[1])) {
+        method &lt;- "lynx"
+      } else {
+        stop("no download method found")
+      }
+      download.file(url, method = method, ...)
+    }
+  } else {  
+    download.file(url, ...)
+  }
+}  
+
+getExt &lt;- function (path){
+  parts &lt;- strsplit(path, "\\.")[[1]]
+  last &lt;- parts[length(parts)]
+  last
+} 
+
+#&lt;&lt;&lt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&gt;&gt;&gt;
+#&lt;&lt;&lt;@@@@@@@@@@@@@@@@@@@@@@@@@@@   Main body    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&gt;&gt;&gt;
+#&lt;&lt;&lt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&gt;&gt;&gt;
+
+
+print(paste("Number of lines:",length(readLines(infile)),sep=" "))
+
+#Data input
+## Detect if the in sound file is a remote file and if so download it
+firstLineInFileInput=readLines(infile, n = 1, warn = FALSE)
+if (length(readLines(infile))==1 &amp;&amp; (toupper(substr(firstLineInFileInput, 1, 4))=="HTTP" | toupper(substr(firstLineInFileInput, 1, 3))=="FTP")){
+    tempSoundFile &lt;- paste(tempfile(),getExt(firstLineInFileInput),sep=".")
+    download(firstLineInFileInput,tempSoundFile,mode="wb")
+    infile &lt;- tempSoundFile	
+} 
+
+#ACI Analysis
+long &lt;- readWave(infile);
+f = long@samp.rate
+long &lt;- cutw(long, f=f, from=sstart, to=sstop, method="Wave");
+aci &lt;- ACI(long, f=f);
+
+#Testing also generation of PNGs
+png(osciloPlot)
+oscillo(long,f=f)
+dev.off()
+</script>
+  <connectionSettings>
+    <host>localhost</host>
+    <port>6311</port>
+    <keepSessionAlive>false</keepSessionAlive>
+    <newRVersion>false</newRVersion>
+  </connectionSettings>
+  <inputSymanticTypes>
+    <net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+      <name>infile</name>
+      <symanticType>PNG_FILE</symanticType>
+    </net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+    <net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+      <name>sstart</name>
+      <symanticType>DOUBLE</symanticType>
+    </net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+    <net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+      <name>sstop</name>
+      <symanticType>DOUBLE</symanticType>
+    </net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+  </inputSymanticTypes>
+  <outputSymanticTypes>
+    <net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+      <name>aci</name>
+      <symanticType>DOUBLE</symanticType>
+    </net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+    <net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+      <name>osciloPlot</name>
+      <symanticType>PNG_FILE</symanticType>
+    </net.sf.taverna.t2.activities.rshell.RShellPortSymanticTypeBean>
+  </outputSymanticTypes>
+</net.sf.taverna.t2.activities.rshell.RshellActivityConfigurationBean></configBean><annotations /></activity></activities><dispatchStack><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.5</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Parallelize</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig xmlns="">
+  <maxJobs>1</maxJobs>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.5</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ErrorBounce</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.5</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Failover</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.5</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Retry</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig xmlns="">
+  <backoffFactor>1.0</backoffFactor>
+  <initialDelay>1000</initialDelay>
+  <maxDelay>5000</maxDelay>
+  <maxRetries>0</maxRetries>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.5</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Invoke</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer></dispatchStack><iterationStrategyStack><iteration><strategy><cross><port name="infile" depth="0" /><port name="sstart" depth="0" /><port name="sstop" depth="0" /></cross></strategy></iteration></iterationStrategyStack></processor></processors><conditions /><datalinks><datalink><sink type="processor"><processor>ACI_and_Oscilo</processor><port>infile</port></sink><source type="dataflow"><port>infile</port></source></datalink><datalink><sink type="processor"><processor>ACI_and_Oscilo</processor><port>sstart</port></sink><source type="dataflow"><port>sstart</port></source></datalink><datalink><sink type="processor"><processor>ACI_and_Oscilo</processor><port>sstop</port></sink><source type="dataflow"><port>sstop</port></source></datalink><datalink><sink type="dataflow"><port>aci</port></sink><source type="processor"><processor>ACI_and_Oscilo</processor><port>aci</port></source></datalink><datalink><sink type="dataflow"><port>oscilo</port></sink><source type="processor"><processor>ACI_and_Oscilo</processor><port>osciloPlot</port></source></datalink></datalinks><annotations><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.FreeTextDescription">
+        <text>Workflow that calculate the Acoustic Complexity Index (ACI) of a section of an audio file (it takes the URL of the file, and the start and end points of the section to analyse as parameters) and also plots the time wave of the section analysed as an oscillogram </text>
+      </annotationBean>
+      <date>2014-11-19 12:09:04.158 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>dc4d0d2c-b8b1-49fc-9eb1-9b5d05175f72</identification>
+      </annotationBean>
+      <date>2014-11-19 11:42:12.115 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>a7270cfe-3ac3-4149-b97d-085de5806565</identification>
+      </annotationBean>
+      <date>2014-11-19 11:41:00.584 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>1a48b010-a642-48df-951a-5baf24fbb7fc</identification>
+      </annotationBean>
+      <date>2014-11-19 11:58:48.787 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.Author">
+        <text>Edward Baker, Simon Rycroft, Robert Haines and Francisco Quevedo</text>
+      </annotationBean>
+      <date>2014-11-19 12:06:25.981 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>8d486ea5-92b3-45e0-b388-9575db53c6f6</identification>
+      </annotationBean>
+      <date>2014-11-19 11:57:01.579 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>8c0600af-da66-4a96-86da-9c419306b488</identification>
+      </annotationBean>
+      <date>2014-11-19 12:09:28.24 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>e52f7a5b-1bb1-4f0f-840e-5e3b5e1f4338</identification>
+      </annotationBean>
+      <date>2014-11-19 11:25:14.102 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.DescriptiveTitle">
+        <text>ACI analysis and oscilo plot</text>
+      </annotationBean>
+      <date>2014-11-19 12:09:22.938 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>7b346fe6-d05f-4c86-8674-2fdce8bfd944</identification>
+      </annotationBean>
+      <date>2014-11-19 11:55:00.371 UTC</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2></annotations></dataflow></workflow>
