@@ -1,3 +1,5 @@
+This repo is archived as BioVeL no longer exists.
+
 WildSoundDB-Scripts
 ===================
 
